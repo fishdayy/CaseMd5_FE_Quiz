@@ -1,12 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
-import Navbar from "./component/Navbar";
+import Register from "./page/Register";
+import {Route, Routes} from "react-router-dom";
+import Login from "./page/Login";
+
 
 function App() {
   return (
     <>
       <div className='container-fluid'>
-
+          <Routes>
+              <Route path={''} element={<Login/>}/>
+              <Route path={'/register'} element={<Register/>}/>
+          </Routes>
       </div>
     </>
   );
