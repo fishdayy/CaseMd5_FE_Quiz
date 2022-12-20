@@ -80,22 +80,98 @@ export default function Home() {
                         </div>
                         <div className="col-1" style={{float: "left", marginTop: "auto", width: "20px",}}></div>
                     </div>
-                    <div className="col-12" style={{float:"left"}}>
-                        <div className="col-1" style={{float: "left", height: "10px", marginTop: "auto", width: "6.5%"}}></div>
-                        <div className="col-2" style={{float: "left", width:"255.4" ,height:"204",backgroundColor:"red",marginRight:"16px",marginBottom:"16px"}}>
-                            <button style={{float: "right", width:"255.4" ,height:"204",backgroundColor:"red",marginRight:"16px",marginBottom:"16px"}}>abv</button>
+                    <div className="col-12" style={{float: "left"}}>
+                        <div className="col-1"
+                             style={{float: "left", height: "10px", marginTop: "auto", width: "6.5%"}}></div>
+                        <div className="col-2" style={{
+                            float: "left",
+                            width: "255.4",
+                            height: "204",
+                            backgroundColor: "red",
+                            marginRight: "16px",
+                            marginBottom: "16px"
+                        }}>
+                            <button style={{
+                                float: "right",
+                                width: "255.4",
+                                height: "204",
+                                backgroundColor: "red",
+                                marginRight: "16px",
+                                marginBottom: "16px"
+                            }}>abv
+                            </button>
                         </div>
-                        <div className="col-2" style={{float: "left", width:"255.4" ,height:"204",backgroundColor:"red",marginRight:"16px",marginBottom:"16px"}}>
-                            <button style={{float: "right", width:"255.4" ,height:"204",backgroundColor:"red",marginRight:"16px",marginBottom:"16px"}}>abv</button>
+                        <div className="col-2" style={{
+                            float: "left",
+                            width: "255.4",
+                            height: "204",
+                            backgroundColor: "red",
+                            marginRight: "16px",
+                            marginBottom: "16px"
+                        }}>
+                            <button style={{
+                                float: "right",
+                                width: "255.4",
+                                height: "204",
+                                backgroundColor: "red",
+                                marginRight: "16px",
+                                marginBottom: "16px"
+                            }}>abv
+                            </button>
                         </div>
-                        <div className="col-2" style={{float: "left", width:"255.4" ,height:"204",backgroundColor:"red",marginRight:"16px",marginBottom:"16px"}}>
-                            <button style={{float: "right", width:"255.4" ,height:"204",backgroundColor:"red",marginRight:"16px",marginBottom:"16px"}}>abv</button>
+                        <div className="col-2" style={{
+                            float: "left",
+                            width: "255.4",
+                            height: "204",
+                            backgroundColor: "red",
+                            marginRight: "16px",
+                            marginBottom: "16px"
+                        }}>
+                            <button style={{
+                                float: "right",
+                                width: "255.4",
+                                height: "204",
+                                backgroundColor: "red",
+                                marginRight: "16px",
+                                marginBottom: "16px"
+                            }}>abv
+                            </button>
                         </div>
-                        <div className="col-2" style={{float: "left", width:"255.4" ,height:"204",backgroundColor:"red",marginRight:"16px",marginBottom:"16px"}}>
-                            <button style={{float: "right", width:"255.4" ,height:"204",backgroundColor:"red",marginRight:"16px",marginBottom:"16px"}}>abv</button>
+                        <div className="col-2" style={{
+                            float: "left",
+                            width: "255.4",
+                            height: "204",
+                            backgroundColor: "red",
+                            marginRight: "16px",
+                            marginBottom: "16px"
+                        }}>
+                            <button style={{
+                                float: "right",
+                                width: "255.4",
+                                height: "204",
+                                backgroundColor: "red",
+                                marginRight: "16px",
+                                marginBottom: "16px"
+                            }}>abv
+                            </button>
                         </div>
-                        <div className="col-2" style={{float: "left", width:"255.4" ,height:"204",backgroundColor:"red",marginRight:"16px",marginBottom:"16px"}}>
-                            <button style={{float: "right", width:"255.4" ,height:"204",backgroundColor:"red",marginRight:"16px",marginBottom:"16px"}}>abv</button>
+                        <div className="col-2" style={{
+                            float: "left",
+                            width: "255.4",
+                            height: "204",
+                            backgroundColor: "red",
+                            marginRight: "16px",
+                            marginBottom: "16px"
+                        }}>
+                            <button style={{
+                                float: "right",
+                                width: "255.4",
+                                height: "204",
+                                backgroundColor: "red",
+                                marginRight: "16px",
+                                marginBottom: "16px"
+                            }}>abv
+                            </button>
                         </div>
                         <div className="col-1" style={{float: "left", marginTop: "auto", width: "20px",}}></div>
                     </div>
