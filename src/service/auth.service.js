@@ -17,7 +17,8 @@ const login = (username, password) => {
         })
         .then((response) => {
             if (response.data) {
-                localStorage.setItem("user", JSON.stringify(response.data));
+                localStorage.setItem("user", JSON.stringify(response.data.messages.account_id));
+                localStorage.setItem("token", JSON.stringify(response.data.messages.token));
             }
 
             return response.data;

@@ -33,8 +33,8 @@ export default function Navbar() {
                             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                     <li className="nav-item">
-                                        <Link to={"/create"}>
-                                            <button className="ml-3 btn btn-outline-success" type="submit">Create Quiz
+                                        <Link to={"/exams"}>
+                                            <button className="ml-3 btn btn-outline-success" type="submit">Manage Quiz
                                             </button>
                                         </Link>
                                     </li>

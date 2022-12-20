@@ -15,6 +15,8 @@ import BoardUser from "./page/account/BoardUser";
 import {logout} from "./redux/auth";
 
 import EventBus from "./common/EventBus";
+import MenuExams from "./page/home/MenuExams";
+import ManageQuizzes from "./page/home/Manage Quizzes";
 
 const App = () => {
     const [showModeratorBoard, setShowModeratorBoard] = useState(false);
@@ -45,6 +47,10 @@ const App = () => {
                 <Route path="/register" element={<Register/>}/>
                 <Route path="/profile" element={<Profile/>}/>
                 <Route path="/user" element={<BoardUser/>}/>
+                <Route path="/exams" element={<MenuExams/>}>
+                    <Route path="/exams" element={<ManageQuizzes/>}/>
+                    
+                </Route>
             </Routes>
         </div>
     );

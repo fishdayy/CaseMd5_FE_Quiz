@@ -10,12 +10,9 @@ import Navbar from "../component/Navbar";
 
 const Login = () => {
     let navigate = useNavigate();
-
     const [loading, setLoading] = useState(false);
-
     const { isLoggedIn } = useSelector((state) => state.auth);
     const { message } = useSelector((state) => state.message);
-
     const dispatch = useDispatch();
 
     useEffect(() => {
