@@ -17,6 +17,7 @@ import {logout} from "./redux/auth";
 import EventBus from "./common/EventBus";
 import MenuExams from "./page/home/MenuExams";
 import ManageQuizzes from "./page/home/Manage Quizzes";
+import {getExams} from "./service/exams.service";
 
 const App = () => {
     const [showModeratorBoard, setShowModeratorBoard] = useState(false);
@@ -28,6 +29,7 @@ const App = () => {
     const logOut = useCallback(() => {
         dispatch(logout());
     }, [dispatch]);
+
 
     useEffect(() => {
         EventBus.on("logout", () => {
@@ -49,7 +51,6 @@ const App = () => {
                 <Route path="/user" element={<BoardUser/>}/>
                 <Route path="/exams" element={<MenuExams/>}>
                     <Route path="/exams" element={<ManageQuizzes/>}/>
-                    
                 </Route>
             </Routes>
         </div>

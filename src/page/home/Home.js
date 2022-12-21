@@ -2,6 +2,7 @@ import Navbar from "../../component/Navbar";
 import Footer from "../../component/Footer";
 import {Link} from "react-router-dom";
 import Button from 'react-bootstrap/Button';
+import ListQuizzes from "./ListQuizzes";
 
 export default function Home() {
     return (
@@ -175,6 +176,10 @@ export default function Home() {
                         </div>
                         <div className="col-1" style={{float: "left", marginTop: "auto", width: "20px",}}></div>
                     </div>
+                </div>
+                <div style={{color: "red",width:"200",height:"200"}}>
+                    <ListQuizzes></ListQuizzes>
+                    asgfkabfajksbfkja
                 </div>
             </div>
             <div className="row">

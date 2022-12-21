@@ -42,12 +42,12 @@ export default function Navbar() {
                             </div>
                             <form className="d-flex" role="search">
                                 <Link to={"/login"}>
-                                    <button className=" btn btn-outline-success" type="submit"
+                                    <button className=" btn btn-outline-success"
                                             style={{marginRight: "10px"}}>Log in
                                     </button>
                                 </Link>
                                 <Link to={"/register"}>
-                                    <button className="ml-3 btn btn-outline-danger" type="submit">Register</button>
+                                    <button className="ml-3 btn btn-outline-danger">Register</button>
                                 </Link>
                             </form>
                         </div>
