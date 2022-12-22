@@ -35,9 +35,15 @@ const Login = () => {
 
         dispatch(login({ username, password }))
             .unwrap()
-            .then(() => {
-                navigate("/");
-                window.location.reload();
+            .then((data) => {
+                if (data.user.message.token){
+                    navigate("/");
+                }else {
+                    alert("sai tk or mk")
+                    navigate("/login")
+                    localStorage.clear()
+                }
+                // window.location.reload();
             })
             .catch(() => {
                 setLoading(false);
@@ -85,24 +91,13 @@ const Login = () => {
                         </div>
 
                         <div className="form-group">
-                            <button type="submit" className="btn btn-primary btn-block" disabled={loading}>
-                                {loading && (
-                                    <span className="spinner-border spinner-border-sm"></span>
-                                )}
+                            <button type="submit" className="btn btn-primary btn-block">
                                 <span>Login</span>
                             </button>
                         </div>
                     </Form>
                 </Formik>
             </div>
-
-            {message && (
-                <div className="form-group">
-                    <div className="alert alert-danger" role="alert">
-                        {message}
-                    </div>
-                </div>
-            )}
         </div>
         </>
 

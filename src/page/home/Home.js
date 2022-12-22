@@ -8,7 +8,6 @@ import {getExams} from "../../service/exams.service";
 
 export default function Home() {
     const listExams = useSelector(state => {
-        console.log(state)
         return state.exam.exams
     })
     const dispatch = useDispatch()

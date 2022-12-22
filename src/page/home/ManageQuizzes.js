@@ -14,8 +14,6 @@ const initialValues = {
     img_exam: ""
 };
 
-console.log((localStorage.getItem('user')))
-
 export default function ManageQuizzes() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -44,37 +42,6 @@ export default function ManageQuizzes() {
                             </Field>
                         </div>
 
-                        {/*<div className="form-group">*/}
-                        {/*    <label htmlFor="disabledSelect" className="form-label">Image</label>*/}
-                        {/*    <input name="img_exam" type="file" className="form-control"/>*/}
-                        {/*</div>*/}
-                        {/*<div className="form-group">*/}
-                        {/*    <label htmlFor="disabledSelect">Question</label>*/}
-                        {/*    <Field name="questions.question_name" type="text" className="form-control"/>*/}
-                        {/*        <div className="form-group">*/}
-                        {/*            <label>Answer 1</label>*/}
-                        {/*            <Field name="questions.answers.answer1" type="text" className="form-control"/>*/}
-                        {/*            <Field name="questions.answers.status1" type="checkbox" />*/}
-                        {/*        </div>*/}
-                        {/*        <div className="form-group">*/}
-                        {/*            <label>Answer 2</label>*/}
-                        {/*            <Field name="questions.answers.answer2" type="text" className="form-control"/>*/}
-                        {/*            <Field name="questions.answers.status2" type="checkbox" />*/}
-
-                        {/*        </div>*/}
-                        {/*        <div className="form-group">*/}
-                        {/*            <label>Answer 3</label>*/}
-                        {/*            <Field name="questions.answers.answer3" type="text" className="form-control"/>*/}
-                        {/*            <Field name="questions.answers.status3" type="checkbox" />*/}
-
-                        {/*        </div>*/}
-                        {/*        <div className="form-group">*/}
-                        {/*            <label>Answer 4</label>*/}
-                        {/*            <Field name="questions.answers.answer4" type="text" className="form-control"/>*/}
-                        {/*            <Field name="questions.answers.status4" type="checkbox" />*/}
-                        {/*        </div>*/}
-                        {/*</div>*/}
-
                         <div className="form-group" style={{marginTop: "20px"}}>
                             <button type="submit" className="btn btn-primary btn-block">
                                 <span>Add Exam</span>
@@ -85,28 +52,6 @@ export default function ManageQuizzes() {
                         </div>
                 </Form>
             </Formik>
-
-            {/*<Table striped bordered hover>*/}
-            {/*    <thead>*/}
-            {/*    <tr>*/}
-            {/*        <th>ID</th>*/}
-            {/*        <th>Name Exam</th>*/}
-            {/*        <th>Description</th>*/}
-            {/*        <th>Action</th>*/}
-            {/*    </tr>*/}
-            {/*    </thead>*/}
-            {/*    <tbody>*/}
-            {/*    <tr>*/}
-            {/*        <td>1</td>*/}
-            {/*        <td>Mark</td>*/}
-            {/*        <td>Otto</td>*/}
-            {/*        <td>*/}
-            {/*            <button type="button" className="btn btn-warning">Edit</button>*/}
-            {/*            <button type="button" className="btn btn-danger">Delete</button>*/}
-            {/*        </td>*/}
-            {/*    </tr>*/}
-            {/*    </tbody>*/}
-            {/*</Table>*/}
         </>
     )
 }

@@ -1,6 +1,15 @@
 import {Link} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
+import {useCallback} from "react";
+import {logout} from "../redux/auth";
 
 export default function Navbar() {
+    const dispatch = useDispatch();
+
+    const { user: currentUser } = useSelector((state) => state.auth);
+    const logOut = useCallback(() => {
+        dispatch(logout());
+    }, [dispatch]);
     return (
         <>
             <div className="row">
@@ -41,14 +50,45 @@ export default function Navbar() {
                                 </ul>
                             </div>
                             <form className="d-flex" role="search">
-                                <Link to={"/login"}>
-                                    <button className=" btn btn-outline-success"
-                                            style={{marginRight: "10px"}}>Log in
-                                    </button>
-                                </Link>
-                                <Link to={"/register"}>
-                                    <button className="ml-3 btn btn-outline-danger">Register</button>
-                                </Link>
+                                {currentUser ? (
+                                    <div className="navbar-nav ml-auto">
+                                        <li className="nav-item">
+                                            <Link to={"/"} className="nav-link">
+                                                {currentUser.username}
+                                            </Link>
+                                        </li>
+                                        <li className="nav-item">
+                                            <a href="/login" className="ml-3 btn btn-outline-danger" onClick={logOut}>
+                                                LogOut
+                                            </a>
+                                        </li>
+                                    </div>
+                                ) : (
+                                    <div className="navbar-nav ml-auto">
+                                        <li className="nav-item">
+                                            <Link to={"/login"} className=" btn btn-outline-success" style={{marginRight: "10px"}}>
+                                                Login
+                                            </Link>
+                                        </li>
+
+                                        <li className="nav-item">
+                                            <Link to={"/register"} className="ml-3 btn btn-outline-primary">
+                                                Sign Up
+                                            </Link>
+                                        </li>
+                                    </div>
+                                )}
+                                {/*<Link to={"/login"}>*/}
+                                {/*    <button className=" btn btn-outline-success"*/}
+                                {/*            style={{marginRight: "10px"}}>Log in*/}
+                                {/*    </button>*/}
+                                {/*</Link>*/}
+                                {/*<Link to={"/register"}>*/}
+                                {/*    <button className="ml-3 btn btn-outline-danger">Register</button>*/}
+                                {/*</Link>*/}
+                                {/*<Link to={"/login"}>*/}
+                                {/*    <button className="ml-3 btn btn-outline-danger">Log Out</button>*/}
+                                {/*</Link>*/}
                             </form>
                         </div>
                     </nav>

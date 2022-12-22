@@ -10,3 +10,10 @@ export const addQuestion = createAsyncThunk(
         return data
     }
 )
+export const findQuestionByIdTest = createAsyncThunk(
+    'question/findQuestionByIdTest',
+    async (id)=>{
+        const res = await customAxios.get('questions'+id)
+        return res.data
+    }
+)

@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useCallback} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -9,7 +9,6 @@ import Login from "./page/Login";
 import Register from "./page/Register";
 import Home from "./page/home/Home";
 import Profile from "./page/account/Profile";
-import BoardUser from "./page/account/BoardUser";
 
 
 import {logout} from "./redux/auth";
@@ -48,7 +47,6 @@ const App = () => {
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/register" element={<Register/>}/>
                 <Route path="/profile" element={<Profile/>}/>
-                <Route path="/user" element={<BoardUser/>}/>
                 <Route path="/exams" element={<MenuExams/>}>
                     <Route path="/exams" element={<ManageQuizzes/>}/>
                 </Route>
