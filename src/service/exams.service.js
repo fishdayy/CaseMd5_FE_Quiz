@@ -14,7 +14,8 @@ export const getExams = createAsyncThunk(
 export const addExams = createAsyncThunk(
     'exams/addExams',
     async (data) => {
-        const res = await customAxios.post('exams', data);
+        console.log("data",data)
+        const res = await customAxios.post('exams',data,{headers: authHeader()});
         return data
     }
 )

@@ -2,7 +2,9 @@ import {Field} from "formik";
 import Form from "react-bootstrap/Form";
 import React, {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import answer from "../redux/answer";
+import {addQuestion} from "../service/quesiton.service";
 
 
 export default function Question(){
@@ -10,8 +12,11 @@ export default function Question(){
 
     const [loading, setLoading] = useState(false);
     const dispatch = useDispatch();
+    const question = useSelector(state => {
+        return state.questions.questions
+    })
     useEffect(() => {
-        dispatch(ans);
+        dispatch(addQuestion());
     }, [dispatch]);
     return(
         <>

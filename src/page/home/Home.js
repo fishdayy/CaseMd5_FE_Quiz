@@ -177,9 +177,8 @@ export default function Home() {
                         <div className="col-1" style={{float: "left", marginTop: "auto", width: "20px",}}></div>
                     </div>
                 </div>
-                <div style={{color: "red",width:"200",height:"200"}}>
+                <div>
                     <ListQuizzes></ListQuizzes>
-                    asgfkabfajksbfkja
                 </div>
             </div>
             <div className="row">

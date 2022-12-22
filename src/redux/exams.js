@@ -1,5 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {getExams} from "../service/exams.service";
+import {addExams, getExams} from "../service/exams.service";
 
 const initialState = {exams: []};
 
@@ -9,7 +9,11 @@ const examsSlice = createSlice({
     reducers: {},
     extraReducers: builder => {
         builder.addCase(getExams.fulfilled, (state, action) => {
-            state.exams = action.payload
+            state.exams = [...action.payload];
+        })
+        builder.addCase(addExams.fulfilled, (state, action) => {
+            console.log(action)
+            state.exams = [...action.payload, state.exams]
         })
     }
 });

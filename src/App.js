@@ -16,11 +16,10 @@ import {logout} from "./redux/auth";
 
 import EventBus from "./common/EventBus";
 import MenuExams from "./page/home/MenuExams";
-import ManageQuizzes from "./page/home/Manage Quizzes";
-import {getExams} from "./service/exams.service";
+
+import ManageQuizzes from "./page/home/ManageQuizzes";
 
 const App = () => {
-    const [showModeratorBoard, setShowModeratorBoard] = useState(false);
     const [showAdminBoard, setShowAdminBoard] = useState(false);
 
     const {user: currentUser} = useSelector((state) => state.auth);
