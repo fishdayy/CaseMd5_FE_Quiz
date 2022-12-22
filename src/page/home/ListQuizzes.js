@@ -1,5 +1,5 @@
 import {useNavigate} from "react-router-dom";
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {getExams} from "../../service/exams.service";
 
@@ -7,23 +7,13 @@ export default function ListQuizzes() {
     const dispatch = useDispatch()
     const navigate = useNavigate();
 
-    const exams = useSelector(state => {
-        console.log(state)
+    const exam = useSelector(state => {
         return state.exam.exams
-    })
+    });
+
     useEffect(() => {
         dispatch(getExams())
-    }, [])
-
-    // const handleEdit = (formValue) => {
-    //     setValues({  });
-    //     dispatch(editExam({
-    //         id: params.id,
-    //         name: values.name,
-    //         email: values.email
-    //     }));
-    //     navigate('/users/');
-    // }
+    }, [getExams])
 
     return (
         <>
@@ -35,18 +25,17 @@ export default function ListQuizzes() {
                             <th scope="col">id</th>
                             <th scope="col">Name Exam</th>
                             <th scope="col">Category Name</th>
-                            <th scope="col">Total Question</th>
                             <th scope="col"></th>
                         </tr>
                         </thead>
-                        {exams.map((item) => {
+
+                        {exam.map((item) => {
                             return (
                                 <tbody>
                                 <tr>
                                     <th scope="row">{item.exam_id}</th>
                                     <td>{item.exam_name}</td>
                                     <td>{item.category_name}</td>
-                                    <td>{item.total_question}</td>
                                     <td>
                                         <button>
                                             Edit
@@ -57,7 +46,8 @@ export default function ListQuizzes() {
                                     </td>
                                 </tr>
                                 </tbody>
-                            )})}
+                            )
+                        })}
                     </table>
                 </div>
             </div>

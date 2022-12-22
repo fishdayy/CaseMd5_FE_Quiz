@@ -18,6 +18,7 @@ import EventBus from "./common/EventBus";
 import MenuExams from "./page/home/MenuExams";
 
 import ManageQuizzes from "./page/home/ManageQuizzes";
+import TestExam from "./page/home/TestExam";
 
 const App = () => {
     const [showAdminBoard, setShowAdminBoard] = useState(false);
@@ -51,6 +52,7 @@ const App = () => {
                 <Route path="/exams" element={<MenuExams/>}>
                     <Route path="/exams" element={<ManageQuizzes/>}/>
                 </Route>
+                <Route path="/tests" element={<TestExam/>}/>
             </Routes>
         </div>
     );
