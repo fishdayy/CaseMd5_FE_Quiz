@@ -11,6 +11,8 @@ export default function ListQuizzes() {
         return state.exam.exams
     });
 
+    const user_id = +localStorage.getItem('user')
+
     useEffect(() => {
         dispatch(getExams())
     }, [getExams])
@@ -29,7 +31,10 @@ export default function ListQuizzes() {
                         </tr>
                         </thead>
 
-                        {exam.map((item) => {
+                        {exam.filter(item => {
+                            return item.account_id == user_id
+                        }).map((item) => {
+                            console.log(item)
                             return (
                                 <tbody>
                                 <tr>

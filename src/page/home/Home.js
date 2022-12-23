@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 import {getExams} from "../../service/exams.service";
+import TestExam from "./TestExam";
 
 export default function Home() {
     const listExams = useSelector(state => {
@@ -77,6 +78,9 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+
+
+            {/*category 1*/}
             <div className="row">
                 <div className="col-1"
                      style={{float: "left", height: "10px", marginTop: "auto", width: "7.5%"}}></div>
@@ -92,17 +96,18 @@ export default function Home() {
             </div>
             <div className="row">
                 <div className="col-12">
-                    {listExams.map((item) => {
-                        if (item.category_id == 1){
+                    {listExams?.map((item) => {
+                        if (item?.category_id == 1){
                             return (
+
                                 <div className="col-2" style={{float:"left",marginLeft: "100px",border: '1px solid black',
                                     boxShadow: "5px 5px 5px 1px #888888",marginBottom:"25px",borderRadius:"15px",height:"75px"
                                     }}>
                                     <div style={{justifyContent: "center", textAlign: "center"}}>
-                                        {item.exam_name}
+                                        {item?.exam_name}
                                     </div>
                                     <div style={{justifyContent: "center", textAlign: "center",marginTop:"10px"}}>
-                                        <button style={{borderRadius:"5px"}}>test</button>
+                                        <Link to="/tests" ><button style={{borderRadius:"5px"}}>test</button> </Link>
                                     </div>
                                 </div>
 
@@ -111,6 +116,7 @@ export default function Home() {
                     })}
                 </div>
             </div>
+            {/*category 2*/}
             <div className="row">
                 <div className="col-1"
                      style={{float: "left", height: "10px", marginTop: "auto", width: "7.5%"}}></div>
@@ -136,7 +142,8 @@ export default function Home() {
                                         {item.exam_name}
                                     </div>
                                     <div style={{justifyContent: "center", textAlign: "center",marginTop:"10px"}}>
-                                        <button style={{borderRadius:"5px"}} >test</button>
+                                        <Link to="/tests" ><button style={{borderRadius:"5px"}}>test</button> </Link>
+
                                     </div>
                                 </div>
 
@@ -145,9 +152,8 @@ export default function Home() {
                     })}
                 </div>
             </div>
-            {/*<div>*/}
-            {/*    <ListQuizzes></ListQuizzes>*/}
-            {/*</div>*/}
+
+            {/*footer*/}
             <div className="row">
                 <div className="col-12">
                     <Footer/>

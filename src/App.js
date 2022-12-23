@@ -18,9 +18,9 @@ import MenuExams from "./page/home/MenuExams";
 
 import ManageQuizzes from "./page/home/ManageQuizzes";
 import TestExam from "./page/home/TestExam";
+import ManagerQuestion from "./page/home/ManagerQuestion";
 
 const App = () => {
-    const [showAdminBoard, setShowAdminBoard] = useState(false);
 
     const {user: currentUser} = useSelector((state) => state.auth);
     const dispatch = useDispatch();
@@ -48,7 +48,8 @@ const App = () => {
                 <Route path="/register" element={<Register/>}/>
                 <Route path="/profile" element={<Profile/>}/>
                 <Route path="/exams" element={<MenuExams/>}>
-                    <Route path="/exams" element={<ManageQuizzes/>}/>
+                    <Route path="/exams/exams" element={<ManageQuizzes/>}/>
+                    <Route path="/exams/questions" element={<ManagerQuestion/>}/>
                 </Route>
                 <Route path="/tests" element={<TestExam/>}/>
             </Routes>

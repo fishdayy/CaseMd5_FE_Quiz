@@ -22,7 +22,7 @@ export default function ManageQuizzes() {
         let data = {...values}
         console.log(data)
         await dispatch(addExams(data))
-        navigate('/exams')
+        navigate('/exams/exams')
     }
     return (
         <>

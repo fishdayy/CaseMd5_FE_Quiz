@@ -18,16 +18,16 @@ export const addExams = createAsyncThunk(
     }
 )
 export const deleteExams = createAsyncThunk(
-    'test/deleteExams',
+    'exams/deleteExams',
     async (idExam)=>{
-        const res = await customAxios.delete('tests'+idExam)
+        const res = await customAxios.delete('exams'+idExam)
         return res.data
     }
 )
-export const findTest = createAsyncThunk(
-    'test/FindTest',
+export const findExams = createAsyncThunk(
+    'exams/findExams',
     async (data) => {
-        const res = await customAxios.get('tests/findTest?name=' + data.exam_name + '&&id=' + data.category_id)
+        const res = await customAxios.get('exams/findExams?name=' + data.exam_name + '&&id=' + data.category_id)
         return res.data
     }
 )
